@@ -1,3 +1,5 @@
+# Northeastern University - PARCS Lab - 2025 Summer Coding Challenge
+
 This is a research problem based on one of our AI-CARING systems that tests both your critical thinking and programming skills.
 
 ## Problem Statement:
