@@ -1,18 +1,26 @@
 [
   {
     "name": "Close Microwave Door",
+    "trigger_type": "always",
+    "repeats": "on_condition",
     "code": "def machine1(current_time, home_data):\n  if home_data[\"microwave_door_open\"]:\n    print(\"microwave door open\")\n    return True\n  else:\n    return False"
   },
   {
     "name": "Call Son at 9pm today",
+    "trigger_type": "once",
+    "repeats": "never",
     "code": "def machine2(current_time, home_data):\n  if current_time.hour >= 21:\n    print(\"at least 9pm\")\n    return True\n  else:\n    return False"
   },
   {
     "name": "Time to go to bed",
+    "trigger_type": "repeating",
+    "repeats": "daily", 
     "code": "def machine3(current_time, home_data):\n  if current_time.hour >= 22:\n    print(\"Time to go to bed\")\n    return True\n  else:\n    return False"
   },
   {
     "name": "Drink water in the morning",
+    "trigger_type": "repeating",
+    "repeats": "every_hour",
     "code": "def machine4(current_time, home_data):\n  if current_time.hour >= 8 and current_time.hour < 12:\n    print(\"Drink water in the morning\")\n    return True\n  else:\n    return False"
   }
 ]
